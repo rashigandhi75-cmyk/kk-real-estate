@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+header {
+    background: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c0392b;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-box {
+    background: rgba(255,255,255,0.9);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.hero-box h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #c0392b;
+}
+
+.hero-box p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.phone {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
