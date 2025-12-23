@@ -77,3 +77,33 @@ footer {
     text-align: center;
     padding: 15px;
 }
+/* Responsive container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Flex layout for cards/sections */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 250px;
+}
+
+/* Media query for phones */
+@media (max-width: 600px) {
+    .navbar a {
+        display: block;
+        text-align: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+}
+
