@@ -5,9 +5,10 @@ body {
     color: #333;
 }
 
+/* HEADER */
 header {
     background: white;
-    padding: 15px 40px;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,24 +28,32 @@ nav a {
     font-weight: 600;
 }
 
+/* HERO SECTION */
 .hero {
-    background: url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4') center/cover no-repeat;
-    height: 80vh;
+    background-image: url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;   /* FIX */
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
+/* HERO BOX */
 .hero-box {
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     padding: 40px;
     border-radius: 12px;
     text-align: center;
+    max-width: 400px;
 }
 
-.hero-box h1 {
+.hero-box h2 {
     margin: 0;
-    font-size: 36px;
+    font-size: 32px;
     color: black;
 }
 
@@ -58,33 +67,14 @@ nav a {
     font-weight: bold;
 }
 
+/* SECTIONS */
 .section {
     max-width: 1000px;
     margin: auto;
     padding: 50px 20px;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-/* Responsive container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Flex layout for cards/sections */
+/* CARDS */
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -92,20 +82,51 @@ footer {
 }
 
 .card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     flex: 1 1 250px;
 }
 
-/* Media query for phones */
-@media (max-width: 600px) {
-    .navbar a {
+/* FOOTER */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav a {
         display: block;
+        margin: 10px 0;
         text-align: center;
     }
 
-    .card {
-        flex: 1 1 100%;
+    .hero {
+        background-position: top;  /* IMPORTANT */
+        min-height: 75vh;
+    }
+
+    .hero-box {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .hero-box h2 {
+        font-size: 26px;
     }
 }
+
+/* HEADINGS */
 h2 {
     color: black;
     font-size: 40px;
