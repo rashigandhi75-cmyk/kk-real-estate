@@ -5,7 +5,6 @@ body {
     color: #333;
 }
 
-/* Header */
 header {
     background: white;
     padding: 15px 40px;
@@ -16,20 +15,18 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     color: black;
 }
 
-/* Navigation */
-.navbar a {
+nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #333;
     font-weight: 600;
 }
 
-/* Hero Section */
 .hero {
     background: url('https://images.unsplash.com/photo-1560185127-6ed189bf02f4') center/cover no-repeat;
     height: 80vh;
@@ -47,7 +44,7 @@ header {
 
 .hero-box h1 {
     margin: 0;
-    font-size: 40px;
+    font-size: 36px;
     color: black;
 }
 
@@ -61,7 +58,6 @@ header {
     font-weight: bold;
 }
 
-/* Sections */
 .section {
     max-width: 1000px;
     margin: auto;
@@ -75,38 +71,43 @@ header {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-h2 {
-    color: black;
-    font-size: 36px;
-    text-align: center;
-}
-
-/* Footer */
 footer {
     background: #2c3e50;
     color: white;
     text-align: center;
     padding: 15px;
 }
+/* Responsive container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-/* Responsive Design */
+/* Flex layout for cards/sections */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    flex: 1 1 250px;
+}
+
+/* Media query for phones */
 @media (max-width: 600px) {
-    header {
-        flex-direction: column;
+    .navbar a {
+        display: block;
         text-align: center;
     }
 
-    .navbar a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .hero-box h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 26px;
+    .card {
+        flex: 1 1 100%;
     }
 }
-
+h2 {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
